@@ -1,7 +1,71 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+#i1 {
+  position: absolute;
+  clip: rect(0px,160px,160px,0px);
+}
+#i2 {
+  position: absolute;
+  clip: rect(0px,320px,160px,160px);
+  left: -152px;
+}
+#i3 {
+  position: absolute;
+  clip: rect(0px,480px,160px,320px);
+  left: -312px;
+}
+#i4 {
+  position: absolute;
+  clip: rect(0px,640px,160px,480px);
+  left: -472px;
+}
+</style>
+</head>
 <body>
 <img src="https://raw.githubusercontent.com/NotAnOctopus/sloth-or-pain-au-chocolat/master/sloth%20or%20pain%20au%20chocolat%20header.png" width=651 height=400>
 <p>sloth or pain au chocolat stuff goes here</p>
+inspired by <a href="http://www.users.globalnet.co.uk/~pennck/pboc/">postbox or cheese</a>
+<br>
+<form>
+
+<p>image of a pain au chocolat #1</p>
+<img id="i1" src="http://i.imgur.com/4ukAClR.jpg" width=640 height=640><br><br><br><br><br><br><br><br>
+<p>
+Sloth <input type=radio onClick="check()" name="z1" id="s1" value="sloth">
+Pain au chocolat <input type=radio onClick="check()" name="z1" id="p1" value="pac">
+</p>
+<p id="potato1"></p>
+<br>
+
+<p>image of a sloth #1</p>
+<img id="i2" src="http://i.imgur.com/4ukAClR.jpg" width=640 height=640><br><br><br><br><br><br><br><br>
+<p>
+Sloth <input type=radio onClick="check()" name="z2" id="s2" value="sloth">
+Pain au chocolat <input type=radio onClick="check()" name="z2" id="p2" value="pac">
+</p>
+<p id="potato2"></p>
+<br>
+
+<p>image of a pain au chocolat #2</p>
+<img id="i3" src="http://i.imgur.com/4ukAClR.jpg" width=640 height=640><br><br><br><br><br><br><br><br>
+<p>
+Sloth <input type=radio onClick="check()" name="z3" id="s3" value="sloth">
+Pain au chocolat <input type=radio onClick="check()" name="z3" id="p3" value="pac">
+</p>
+<p id="potato3"></p>
+<br>
+
+<p>image of a sloth #2</p>
+<img id="i4" src="http://i.imgur.com/4ukAClR.jpg" width=640 height=640><br><br><br><br><br><br><br><br>
+<p>
+Sloth <input type=radio onClick="check()" name="z4" id="s4" value="sloth">
+Pain au chocolat <input type=radio onClick="check()" name="z4" id="p4" value="pac">
+</p>
+<p id="potato4"></p>
+
+
+</form>
 </body>
 </html>
