@@ -1,5 +1,15 @@
 var answer = ["claudio ranieri is a god", false, true, false, true, false];
 
+function antelope() {
+  for (polarbear=1; polarbear<5; polarbear++) {
+    document.getElementById("s"+polarbear).checked=false;
+    document.getElementById("p"+polarbear).checked=false;
+    document.getElementById("s"+polarbear).disabled=false;
+    document.getElementById("p"+polarbear).disabled=false;
+    document.getElementById("potato"+polarbear).innerHTML = "";
+  }
+}
+
 function check() {
   var score = 0;
   var scoresloth = 0; // use later
@@ -24,5 +34,6 @@ function check() {
   }
   if (broccoli == 4) {
     alert("You scored "+score);
+    antelope();
   }
 }
