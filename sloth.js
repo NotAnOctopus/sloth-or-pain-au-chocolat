@@ -1,5 +1,24 @@
 var answer = ["claudio ranieri is a god", false, true, false, true, false, true, true, false, true, false, false, true, false, true, true, false];
 
+var message = [
+  "Zero right. Don't get mad when the RSPCA hunt you down on charges of cruelty to pain au chocolats.",
+  "Don't go around asking a French boulangerie why they're serving live sloths for breakfast. That'll make them hate you.",
+  "Terrible score. If sloths get technologically advanced enough to take over the world, you'll be an easy target.",
+  "Warning! Eating sloths for breakfast isn't recommended! Their guts can spill out and don't taste very nice!",
+  "Soon the French will get mad at you for accusing their breakfasts of being lazy.",
+  "You sure you didn't keep a pain au chocolat as a pet when you were a kid?",
+  "You'll need better observational skills than that if you ever work in a bakery. Or a zoo. Or if you're a sloth.",
+  "Less than half right! You'd probably be better off if you'd just guessed.",
+  "Half right. Did you guess your way through this quiz? Guessing won't help you when pain au chocolats evolve to disguise themselves as sloths!",
+  "Be careful out there! Sloths don't like it when you try baking them!",
+  "You'll need to do a bit more work on this to prepare yourself for an audition on the latest series of Sloth-Or-Pain-Au-Chocolat Reality TV!",
+  "Quite a few mistakes. Just don't tell them your score the next time you walk into a French bakery. Or a zoo.",
+  "Not bad. But you might have trouble when pains au chocolat become self-aware and disguise themselves as sloths as part of their plan for world domination, so keep practising!",
+  "A decent score! You can confidently wander into a boulangerie in France without having an existential crisis now.",
+  "Pretty good! Just don't tell the sloths, else they'll know that their crafty disguises aren't working on you so well.",
+  "Very nearly made it! Watch out for that one last sneaky sloth trying to disguise itself as a pain au chocolat. They can be deceptive sometimes.",
+  "Congratulations! Impeccable sloth and pain au chocolat identification skills!"];
+
 function antelope() {
   for (polarbear=1; polarbear<17; polarbear++) {
     document.getElementById("s"+polarbear).checked=false;
@@ -33,7 +52,7 @@ function check() {
     }
   }
   if (broccoli == 16) {
-    alert("You scored "+score);
+    alert("You scored "+score+"\n\n"+message[score]);
     antelope();
   }
 }
