@@ -1,4 +1,34 @@
-var answer = ["claudio ranieri is a god", false, true, false, true, false, true, true, false, true, false, false, true, false, true, true, false];
+var originals = ["claudio ranieri is a god", false, true, false, true, false, true, true, false, true, false, false, true, false, true, true, false];
+
+function everydayimshufflin(thingy) { // knuth shuffle
+  var watermelons=thingy.slice();
+  for (i=thingy.length-1; i>=0; i--) {
+    var blobfish = Math.floor(Math.random()*(i+1)); 
+    var shittytempvar = watermelons[blobfish];  
+    watermelons[blobfish] = watermelons[i]; 
+    watermelons[i] = shittytempvar;
+  }
+  return watermelons;
+}
+
+var batman=[];
+for (tomatoes=1; tomatoes<=16; tomatoes++) {
+  batman.push(tomatoes);
+}
+var spiderman=everydayimshufflin(batman);
+// console.log(spiderman);
+
+var answer = ["actual answer"];
+for (someone_date_me=0; someone_date_me<=15; someone_date_me++) {
+  answer.push(originals[spiderman[someone_date_me]]);
+}
+// console.log(answer);
+
+for (pikachu=1; pikachu<=16; pikachu++) {
+  mysterious_thing=document.getElementById("i"+pikachu);
+  boris_johnson=spiderman[pikachu-1];
+  mysterious_thing.className="class"+boris_johnson;
+}
 
 var message = [
   "Zero right. Don't get mad when the RSPCA hunt you down on charges of cruelty to pain au chocolats.",
@@ -19,7 +49,7 @@ var message = [
   "Very nearly made it! Watch out for that one last sneaky sloth trying to disguise itself as a pain au chocolat. They can be deceptive sometimes.",
   "Congratulations! Impeccable sloth and pain au chocolat identification skills!"];
 
-function antelope() {
+function antelope() { // this needs to be updated - at this point it doesn't rerandomise the pictures on restarting the quiz
   for (polarbear=1; polarbear<17; polarbear++) {
     document.getElementById("s"+polarbear).checked=false;
     document.getElementById("p"+polarbear).checked=false;
@@ -52,7 +82,7 @@ function check() {
     }
   }
   if (broccoli == 16) {
-    alert("You scored "+score+"\n\n"+message[score]);
+    alert("You scored "+score+"\n\n"+message[score]+"\nPressing OK restarts the quiz.");
     antelope();
   }
 }
