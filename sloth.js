@@ -1,4 +1,6 @@
 var originals = ["claudio ranieri is a god", false, true, false, true, false, true, true, false, true, false, false, true, false, true, true, false];
+var batman=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+var answer;
 
 function everydayimshufflin(thingy) { // knuth shuffle
   var watermelons=thingy.slice();
@@ -11,24 +13,23 @@ function everydayimshufflin(thingy) { // knuth shuffle
   return watermelons;
 }
 
-var batman=[];
-for (tomatoes=1; tomatoes<=16; tomatoes++) {
-  batman.push(tomatoes);
+function randomise() {
+  var spiderman=everydayimshufflin(batman);
+  // console.log(spiderman);
+  
+  answer = ["actual answer"];
+  for (someone_date_me=0; someone_date_me<=15; someone_date_me++) {
+    answer.push(originals[spiderman[someone_date_me]]);
+  }
+  // console.log(answer);
+  
+  for (pikachu=1; pikachu<=16; pikachu++) {
+    mysterious_thing=document.getElementById("i"+pikachu);
+    boris_johnson=spiderman[pikachu-1];
+    mysterious_thing.className="class"+boris_johnson;
+  }
 }
-var spiderman=everydayimshufflin(batman);
-// console.log(spiderman);
-
-var answer = ["actual answer"];
-for (someone_date_me=0; someone_date_me<=15; someone_date_me++) {
-  answer.push(originals[spiderman[someone_date_me]]);
-}
-// console.log(answer);
-
-for (pikachu=1; pikachu<=16; pikachu++) {
-  mysterious_thing=document.getElementById("i"+pikachu);
-  boris_johnson=spiderman[pikachu-1];
-  mysterious_thing.className="class"+boris_johnson;
-}
+randomise();
 
 var message = [
   "Zero right. Don't get mad when the RSPCA hunt you down on charges of cruelty to pain au chocolats.",
@@ -57,6 +58,7 @@ function antelope() { // this needs to be updated - at this point it doesn't rer
     document.getElementById("p"+polarbear).disabled=false;
     document.getElementById("potato"+polarbear).innerHTML = "";
   }
+  randomise();
 }
 
 function check() {
@@ -82,7 +84,7 @@ function check() {
     }
   }
   if (broccoli == 16) {
-    alert("You scored "+score+"\n\n"+message[score]+"\nPressing OK restarts the quiz.");
+    alert("You scored "+score+"/16\n\n"+message[score]+"\n\nPressing OK restarts the quiz.");
     antelope();
   }
 }
