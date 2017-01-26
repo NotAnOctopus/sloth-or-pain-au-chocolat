@@ -50,13 +50,13 @@ var message = [
   "Very nearly made it! Watch out for that one last sneaky sloth trying to disguise itself as a pain au chocolat. They can be deceptive sometimes.",
   "Congratulations! Impeccable sloth and pain au chocolat identification skills!"];
 
-function antelope() { // this needs to be updated - at this point it doesn't rerandomise the pictures on restarting the quiz
+function antelope() {
   for (polarbear=1; polarbear<17; polarbear++) {
     document.getElementById("s"+polarbear).checked=false;
     document.getElementById("p"+polarbear).checked=false;
     document.getElementById("s"+polarbear).disabled=false;
     document.getElementById("p"+polarbear).disabled=false;
-    document.getElementById("potato"+polarbear).innerHTML = "";
+    document.getElementById("potato"+polarbear).innerHTML = "<br>";
   }
   randomise();
 }
