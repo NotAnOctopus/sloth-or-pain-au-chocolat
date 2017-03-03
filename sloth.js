@@ -72,11 +72,19 @@ function check() {
       if (document.getElementById("s"+sausages).checked == answer[sausages]) {
         // correct
         score++;
-        document.getElementById("potato"+sausages).innerHTML = "correct!";
+        document.getElementById("potato"+sausages).style.color = "green";
+        document.getElementById("potato"+sausages).innerHTML = "Correct!";
+        if (document.getElementById("s"+sausages).checked) {
+          scoresloth++;
+        }
+        else {
+          scorepac++;
+        }
       }
       else {
         // wrong
-        document.getElementById("potato"+sausages).innerHTML = "wrong!";
+        document.getElementById("potato"+sausages).style.color = "red";
+        document.getElementById("potato"+sausages).innerHTML = "Wrong!";
       }
       document.getElementById("s"+sausages).disabled=true;
       document.getElementById("p"+sausages).disabled=true;
@@ -84,7 +92,7 @@ function check() {
     }
   }
   if (broccoli == 16) {
-    alert("You scored "+score+"/16\n\n"+message[score]+"\n\nPressing OK restarts the quiz.");
+    alert("You scored "+score+"/16\n\nYou correctly identified "+scoresloth+"/8 of the sloths and "+scorepac+"/8 of the pains au chocolat.\n\n"+message[score]+"\n\nPressing OK restarts the quiz.");
     antelope();
   }
 }
